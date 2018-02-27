@@ -13,6 +13,7 @@ public class Person {
     {
         System.out.println("i am going to use the axe");
         System.out.println("");
+        System.out.println("ceshi ceshi ");
         //调用axe的chop()方法
         //表名Person对象依赖于axe对象
         System.out.print(axe.chop());
