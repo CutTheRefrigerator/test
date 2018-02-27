@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <!--加载国际化资源文件-->
+    <constant name="struts.custom.i18n.resources" value="mess"/>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+    <constant name="struts.devMode" value="true" />
+    <package name="yinjh"  namespace="/" extends="struts-default">
+        <action name="login" class="action.LoginAction">
+            <result name="success">/WEB-INF/view/sys/welcome.jsp</result>
+            <result name="error">/WEB-INF/view/sys/error.jsp</result>
+        </action>
+        <action name="*">
+            <result>/WEB-INF/view/sys/{1}.jsp</result>
+        </action>
+    </package>
+</struts>
